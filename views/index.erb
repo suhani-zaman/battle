@@ -1,4 +1,15 @@
-<h1>My name is <%= @animal_name+" "+@age %></h1>
-  <div style='border: dashed red'>
+<% if @name %>
+<h1>My name is <%= @name %></h1>
+<% end %>
+
+<% if @name.nil? %>
+ <form action="/named-cat" method="GET">
+     <input type="text" name="name">
+     <input type="submit" value="Submit">
+ </form>
+ <% end %>
+
+
+<div style='border: dashed red'>
     <img src='http://i.imgur.com/jFaSxym.png'>
-  </div>
+</div>

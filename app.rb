@@ -15,9 +15,9 @@ get '/random-cat' do
   @animal_name = ["Amigo", "Misty", "Almond"].sample
   erb(:index)
 end
+
 get '/named-cat' do
+  @name = params[:name]
   p params
-  @animal_name = params[:name]
-  @age = params[:age]
   erb(:index)
 end
