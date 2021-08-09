@@ -8,9 +8,11 @@ get '/secret' do
   "how are you?"
 end
 get '/public' do
-  "HOW DARE YOU?"
+  "What are you doing?"
 end
 
 get '/cat' do
+  @animal_name = ["Amigo", "Misty", "Almond"].sample
   erb(:index)
 end
+
