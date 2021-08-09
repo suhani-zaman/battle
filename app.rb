@@ -11,8 +11,13 @@ get '/public' do
   "What are you doing?"
 end
 
-get '/cat' do
+get '/random-cat' do
   @animal_name = ["Amigo", "Misty", "Almond"].sample
   erb(:index)
 end
-
+get '/named-cat' do
+  p params
+  @animal_name = params[:name]
+  @age = params[:age]
+  erb(:index)
+end
