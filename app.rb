@@ -12,9 +12,5 @@ get '/public' do
 end
 
 get '/cat' do
-  "<div style='border: dashed red'>
-
-  <img src='http://i.imgur.com/jFaSxym.png'>
-  
-  </div>"
+  erb(:index)
 end
