@@ -3,12 +3,11 @@
 <% end %>
 
 <% if @name.nil? %>
- <form action="/named-cat" method="GET">
+ <form action="/named-cat">
      <input type="text" name="name">
      <input type="submit" value="Submit">
  </form>
  <% end %>
-
 
 <div style='border: dashed red'>
     <img src='http://i.imgur.com/jFaSxym.png'>
